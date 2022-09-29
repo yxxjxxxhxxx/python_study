@@ -61,6 +61,12 @@ elif a >= 60 and a <70:
 elif a <60:
      print("F")
 
+b = int(input("81 에서 89 사이 값 입력"))
+if 80 < b < 90:
+    print("{} 살려줘".format(b))
+else:
+    print("81 ~ 89 사이 값 입력 ")
+
 #range(start, end, step=1): 연속된 숫자 나열을 만들어줌
 a = list(range(1, 11))
 print(a)
