@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>예매 5순위 목록</h3>
+<table border="1">
+  <tr><th>영화명</th><th>예매점유율</th></tr>
+  {% for i in val %}
+    <tr>
+      <td>{{i[0]}}</td><td>{{i[1]}}</td>
+    </tr>
+  {% endfor %}
+</table><br/>
+<h3>점유율 그래프</h3>
+<img src="{{img_path}}">
+</body>
+</html>

@@ -10,6 +10,7 @@ def addMember():
             while True:
                 m[i] = input(titles[i])
                 res = getByName(m[i])
+                print(res)
                 if res==None:
                     break
         else:
@@ -30,6 +31,7 @@ def printMember():
         print('not found name')
     else:
         i = res[1]
+        print("res[1]의 값 =", res[1])
         cnt = 0
         for j in i:
             print(titles[cnt],j)

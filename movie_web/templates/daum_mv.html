@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>다음 영화 예매순위</h3>
+<table border="1">
+  <tr><th>제목</th><th>이미지</th><th>평점</th><th>개봉일</th><th>예매율</th><th>누적관객수</th></tr>
+{% for mv in res: %}
+<tr>
+  <td>{{mv.title}}</td><td><img src="{{mv.src}}"></td><td>{{mv.score}}</td>
+  <td>{{mv.opendt}}</td><td>{{mv.rate}}</td><td>{{mv.acc_au}}</td>
+</tr>
+{% endfor %}
+  </table>
+</body>
+</html>

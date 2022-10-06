@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>이번주 영화 순위</h3>
+<form action="/search" method="post">
+영화명:<input type="text" name="name">
+    <input type="submit" value="검색">
+    </form><br/>
+<table border="1">
+<tr>
+    {% for c in cols %}
+        <th>{{c}}</th>
+    {% endfor %}
+</tr>
+    {% for mv in data %}
+        <tr>
+            {% for idx, m in enumerate(mv) %}
+                {% if idx==1 %}
+            <td><a href="/search?name={{m}}">{{m}}</a></td>
+                {% else %}
+                    <td>{{m}}</td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
